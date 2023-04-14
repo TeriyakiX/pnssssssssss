@@ -36,7 +36,7 @@ class Application
     public function __get($key)
     {
         switch ($key) {
-            case 'setting':
+            case 'settings':
                 return $this->setting;
             case 'route':
                 return $this->route;
