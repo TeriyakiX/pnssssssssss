@@ -4,7 +4,7 @@ namespace Src;
 
 use Error;
 
-class Settings
+class Setting
 {
     private array $_settings;
 
@@ -30,4 +30,9 @@ class Settings
     {
         return '/' . $this->path['views'] ?? '';
     }
+    public function getDbSetting(): array
+    {
+        return $this->db ?? [];
+    }
+
 }
