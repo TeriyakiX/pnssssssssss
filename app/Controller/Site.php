@@ -21,6 +21,22 @@ class Site
     {
         return new View('site.hello', ['message' => 'hello working']);
     }
+    public function Subdivisions(): string
+    {
+        return new View('site.Subdivisions', ['message' => 'Subdivisions']);
+    }
+    public function Calculations(): string
+    {
+        return new View('site.Calculations', ['message' => 'Calculations']);
+    }
+    public function CalculationsAnswer1(): string
+    {
+        return new View('site.CalculationsAnswer1', ['message' => 'CalculationsAnswer1']);
+    }
+    public function CalculationsAnswer2(): string
+    {
+        return new View('site.CalculationsAnswer2', ['message' => 'CalculationsAnswer2']);
+    }
 
     public function signup(Request $request): string
     {
