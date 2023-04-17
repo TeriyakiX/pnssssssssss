@@ -21,6 +21,7 @@
         else:
             ?>
             <a href="<?= app()->route->getUrl('/Subdivisions') ?>">Подразделения</a>
+            <a href="<?= app()->route->getUrl('/AddUser') ?>">Добавление пользователя</a>
             <a href="<?= app()->route->getUrl('/Calculations') ?>">Расчеты</a>
             <a href="<?= app()->route->getUrl('/logout') ?>">Выход (<?= app()->auth::user()->name ?>)</a>
         <?php

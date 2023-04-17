@@ -50,6 +50,8 @@ html {
     border: 1px solid #7EC1FF;
     background-color: #7EC1FF;
     border-radius: 20px;
+    align-items: center;
+    justify-content: center;
 }
 .but_log {
     background: white;
@@ -83,4 +85,36 @@ html {
     height: 39px;
     border-radius: 20px;
     border: none;
+}
+.back_add {
+    display: flex;
+    padding: 70px;
+    flex-direction: column;
+    border: 1px solid #7EC1FF;
+    background-color: #7EC1FF;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.adduser {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px;
+}
+.add_user {
+    padding: 5px;
+}
+.add_user input{
+    padding: 5px;
+    width: 230px;
+    height: 39px;
+    border-radius: 20px;
+    border: none;
+}
+
+.ad_user {
+    display: flex;
+    flex-direction: column;
 }

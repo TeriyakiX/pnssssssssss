@@ -40,6 +40,10 @@ class Site
     {
         return new View('site.SubdivisionsAnswer', ['message' => 'SubdivisionsAnswer']);
     }
+    public function AddUser(): string
+    {
+        return new View('site.AddUser', ['message' => 'AddUser']);
+    }
 
     public function signup(Request $request): string
     {
