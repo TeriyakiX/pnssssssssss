@@ -16,7 +16,6 @@ class Site
         return (new View())->render('site.post', ['posts' => $posts]);
     }
 
-
     public function hello(): string
     {
         return new View('site.hello', ['message' => 'hello working']);
@@ -36,6 +35,10 @@ class Site
     public function CalculationsAnswer2(): string
     {
         return new View('site.CalculationsAnswer2', ['message' => 'CalculationsAnswer2']);
+    }
+    public function SubdivisionsAnswer(): string
+    {
+        return new View('site.SubdivisionsAnswer', ['message' => 'SubdivisionsAnswer']);
     }
 
     public function signup(Request $request): string
