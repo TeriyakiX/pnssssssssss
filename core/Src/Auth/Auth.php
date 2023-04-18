@@ -58,4 +58,11 @@ class Auth
         return true;
     }
 
+    public static function checkrole(): bool
+    {
+        if (self::user()-> role==0) {
+            return true;
+        }
+        return false;
+    }
 }
