@@ -15,17 +15,6 @@
         <option value="3">Второй корпус</option>
         <option value="4">Третий корупс</option>
     </select>
-    <div class="sub">
-        <div class="sub_all">
-            <h2>Аудитория 401</h2>
-                <div class="sub_answer">
-                    <h2>Площадь = 50 м2</h2>
-                    <h2>Посадочных мест = 25</h2>
-                    <h2>Кабинет</h2>
-                    <a href="<?= app()->route->getUrl('/hello') ?>">Хорошо</a>
-                </div>
-        </div>
-    </div>
 
 </main>
 <footer>

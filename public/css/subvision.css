@@ -34,7 +34,7 @@
     color: black;
 
 }
-.sub_all h2 {
+.sub_all a {
     padding: 5px;
     margin: 5px;
     border: 1px solid black;
@@ -42,7 +42,18 @@
     background-color: #7EC1FF;
     text-decoration: none  ;
     color: black;
+    width: 200px;
+    text-align: center;
 }
+ .sub_all h2 {
+     padding: 5px;
+     margin: 5px;
+     border: 1px solid black;
+     cursor: pointer;
+     background-color: #7EC1FF;
+     text-decoration: none  ;
+     color: black;
+ }
 
 .sub_answer {
     display: flex;
@@ -60,5 +71,10 @@
 .sub_answer a {
     display: flex;
     margin: 5px;
+    justify-content: center;
+}
+.sub_obj   {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }

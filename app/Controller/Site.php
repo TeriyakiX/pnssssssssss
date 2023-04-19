@@ -3,6 +3,7 @@
 namespace Controller;
 
 use Model\Post;
+use Model\Room;
 use Src\View;
 use Src\Request;
 use Model\User;
@@ -22,8 +23,10 @@ class Site
     }
     public function Subdivisions(): string
     {
-        return new View('site.Subdivisions', ['message' => 'Subdivisions']);
+        $room = Room::all();
+        return new View('site.Subdivisions', ['room' => $room]);
     }
+
     public function Calculations(): string
     {
         return new View('site.Calculations', ['message' => 'Calculations']);
@@ -51,6 +54,13 @@ class Site
             app()->route->redirect('/hello');
         }
         return new View('site.signup');
+    }
+
+    public function roomView(Request $request): string
+    {
+       $room = Room::where('id', $request->id)->first();
+        //var_dump($room[0]->name); die();
+        return (new View())->render('site.roomView', ['room' => $room]);
     }
 
     public function login(Request $request): string

@@ -17,16 +17,26 @@
     </select>
     <div class="sub">
         <div class="sub_all">
-            <a href="<?= app()->route->getUrl('/SubdivisionsAnswer') ?>">Аудитория 401</a>
-            <a href="">Аудитория 401</a>
-            <a href="">Аудитория 401</a>
-            <a href="">Аудитория 401</a>
-            <a href="">Аудитория 401</a>
-            <a href="">Аудитория 401</a>
-            <a href="">Аудитория 401</a>
+            <?php
+            foreach ($room as $rooom) {
+            ?>
+                <?php
+                    if ($rooom->type_sub == 1):
+                        ?>
+                            <div class="sub_obj">
+                                <a href="<?= app()->route->getUrl('/roomView') ?>?id=<?= $rooom->id ?>"><?= $rooom->name?></a>
 
+                            </div>
+                    <?php
+                    endif;
+                ?>
+                <?php
+            }
+            ?>
         </div>
     </div>
+
+
 
 </main>
 <footer>
