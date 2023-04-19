@@ -13,13 +13,24 @@
         <div class="calc">
             <form class="forml" method="get">
                 <div class="back_calc1">
-                    <h2>Общая площадь учебных аудиторий </h2>
+                    <h2>Общая площадь учебных аудиторий по помещениям и в целом по учебному заведению</h2>
+                    <p2>Общая площадь учебных аудиторий по помещениям</p2>
                 </div>
                 <div class="back_calc1">
-                    <h2>1000м2</h2>
-                </div>
-                <div>
-                    <button class="but_calc" >Хорошо</button>
+
+                    <p2>Общая площадь по кабинетам</p2>
+                    <h2>
+                        <?= $subvision[0] ->roooms ->sum('S');?>
+                    </h2>
+                    <p2>Общая площадь по спортивному залу</p2>
+                    <h2>
+                        <?= $subvision[1] ->roooms ->sum('S');?>
+                    </h2>
+                    <p2>Общая площадь учебных аудиторий по учебному заведению</p2>
+                    <h2>
+                        <?= $subvision[0] ->roooms ->sum('S');?>
+                    </h2>
+                    <a  class="but_logs"  href="<?= app()->route->getUrl('/Calculations') ?>">Ответ</a>
                 </div>
             </form>
         </div>

@@ -13,13 +13,22 @@
         <div class="calc">
             <form class="forml" method="get">
                 <div class="back_calc1">
-                    <h2>Общее количество посадочных мест</h2>
+                    <h2>Общее количество посадочных мест для преподователей</h2>
                 </div>
                 <div class="back_calc1">
-                    <h2>575</h2>
-                </div>
-                <div>
-                    <button class="but_calc" >Хорошо</button>
+                    <p2>По главному корпсу</p2>
+                    <h2>
+                        <?= $subvision[0] ->rooms ->sum('slot_prepod');?>
+                    </h2>
+                    <p2>По второму корпсу</p2>
+                    <h2>
+                        <?= $subvision[1] ->rooms ->sum('slot_prepod');?>
+                    </h2>
+                    <p2>По третьему корпсу</p2>
+                    <h2>
+                        <?= $subvision[2] ->rooms ->sum('slot_prepod');?>
+                    </h2>
+                    <a  class="but_logs"  href="<?= app()->route->getUrl('/Calculations') ?>">Ответ</a>
                 </div>
             </form>
         </div>

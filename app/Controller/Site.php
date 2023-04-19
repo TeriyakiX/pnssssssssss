@@ -4,6 +4,7 @@ namespace Controller;
 
 use Model\Post;
 use Model\Room;
+use Model\Subvision;
 use Src\View;
 use Src\Request;
 use Model\User;
@@ -26,26 +27,42 @@ class Site
         $room = Room::all();
         return new View('site.Subdivisions', ['room' => $room]);
     }
+    public function Subdivisions2(): string
+    {
+        $room = Room::all();
+        return new View('site.Subdivisions2', ['room' => $room]);
+    }
+
+    public function Subdivisions3(): string
+    {
+        $room = Room::all();
+        return new View('site.Subdivisions3', ['room' => $room]);
+    }
 
     public function Calculations(): string
     {
-        return new View('site.Calculations', ['message' => 'Calculations']);
+        return new View('site.Calculations',);
     }
     public function CalculationsAnswer1(): string
     {
-        return new View('site.CalculationsAnswer1', ['message' => 'CalculationsAnswer1']);
+        $subvision = Subvision::all();
+        return new View('site.CalculationsAnswer1', ['subvision' => $subvision]);
     }
     public function CalculationsAnswer2(): string
     {
-        return new View('site.CalculationsAnswer2', ['message' => 'CalculationsAnswer2']);
+        $subvision = Subvision::all();
+        return new View('site.CalculationsAnswer2', ['subvision' => $subvision]);
     }
     public function SubdivisionsAnswer(): string
     {
         return new View('site.SubdivisionsAnswer', ['message' => 'SubdivisionsAnswer']);
     }
-    public function AddUser(): string
+    public function AddUser(Request $request): string
     {
-        return new View('site.AddUser', ['message' => 'AddUser']);
+        if ($request->method === 'POST' && User::create($request->all())) {
+            app()->route->redirect('/hello');
+        }
+        return new View('site.AddUser');
     }
 
     public function signup(Request $request): string

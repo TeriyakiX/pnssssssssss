@@ -6,6 +6,7 @@
     border: 1px solid #7EC1FF;
     background-color: #7EC1FF;
     width: 1200px;
+    text-align: center;
 }
 .back_calc button {
     border: none;
@@ -29,19 +30,16 @@
     justify-content: center;
     border: 1px solid #7EC1FF;
     background-color: #7EC1FF;
-    width: 1200px;
     align-items: center;
-}
-.back_calc1 button {
-    border: none;
-    border-radius: 20px;
+    width: 1200px;
 }
 .but_calc {
     border: none;
     border-radius: 20px;
-    width: 1200px;
+
     cursor: pointer;
     background-color: #7EC1FF;
+    text-decoration: none;
 }
 .but_calc:hover {
     background-color: #44A4FC;

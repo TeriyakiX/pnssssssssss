@@ -5,6 +5,7 @@
                     <h2><?= $room->name?></h2>
                     <h2>Площадь:<?= $room->S?></h2>
                     <h2>Посадочных мест:<?= $room->slots?></h2>
+                    <h2>Посадочных мест для преподов:<?= $room->slot_prepod?></h2>
                     <h2>Кабинет:<?= $room->type_room_id?></h2>
                     <a href="<?= app()->route->getUrl('/Subdivisions') ?>">Хорошо</a>
                 </div>

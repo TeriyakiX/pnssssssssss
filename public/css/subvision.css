@@ -78,3 +78,19 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.nav_sub {
+    color: red;
+    display: flex;
+    margin: 50px;
+    justify-content: center;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #7EC1FF;
+
+}
+.nav_sub a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}

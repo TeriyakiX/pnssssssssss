@@ -16,6 +16,7 @@ class Room extends Model
         'name',
         'S',
         'slots',
+        'slot_prepod',
         'type_room_id',
         'type_sub',
     ];

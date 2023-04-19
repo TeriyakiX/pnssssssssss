@@ -59,6 +59,41 @@ html {
     border: 1px solid  black;
     cursor: pointer;
     border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+}
+.but_logs {
+    background: white;
+    margin: 5px;
+    border: 1px solid  black;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    width: 1200px;
+}
+.but_logs:hover {
+    background: #44A4FC;
+    margin: 5px;
+    border: 1px solid  black;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+.but_log:hover {
+    background: #44A4FC;
+    margin: 5px;
+    border: 1px solid  black;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
 }
 .fot_back{
     display: flex;

@@ -10,9 +10,9 @@
 </head>
 <header>
     <nav class="nav_sub">
-            <a href="<?= app()->route->getUrl('/Subdivisions') ?>">Главный корпус</a>
-            <a href="<?= app()->route->getUrl('/Subdivisions2') ?>">Второй корпус</a>
-            <a href="<?= app()->route->getUrl('/Subdivisions3') ?>">Третий корпус</a>
+        <a href="<?= app()->route->getUrl('/Subdivisions') ?>">Главный корпус</a>
+        <a href="<?= app()->route->getUrl('/Subdivisions2') ?>">Второй корпус</a>
+        <a href="<?= app()->route->getUrl('/Subdivisions3') ?>">Третий корпус</a>
     </nav>
 </header>
 <main>
@@ -22,7 +22,7 @@
             foreach ($room as $rooom) {
             ?>
                 <?php
-                    if ($rooom->type_sub == 1):
+                    if ($rooom->type_sub == 2):
                         ?>
                             <div class="sub_obj">
                                 <a href="<?= app()->route->getUrl('/roomView') ?>?id=<?= $rooom->id ?>"><?= $rooom->name?></a>

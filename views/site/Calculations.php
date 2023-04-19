@@ -14,8 +14,7 @@
             <form class="forml" method="get">
                 <div class="back_calc">
                     <h2>Подсчитать общее количество посадочных мест для сотрудников по подразделениям.</h2>
-                    <button class="but_log" >Подсчитать</button>
-                    <a href="<?= app()->route->getUrl('/CalculationsAnswer1') ?>">Ответ</a>
+                    <a  class="but_log"  href="<?= app()->route->getUrl('/CalculationsAnswer1') ?>">Ответ</a>
                 </div>
             </form>
         </div>
@@ -23,8 +22,7 @@
             <form class="forml" method="get">
                 <div class="back_calc">
                     <h2>Подсчитать общую площадь учебных аудиторий по помещениям и в целом по учебному заведению</h2>
-                    <button class="but_log" >Подсчитать</button>
-                    <a href="<?= app()->route->getUrl('/CalculationsAnswer2') ?>">Ответ</a>
+                    <a  class="but_log"  href="<?= app()->route->getUrl('/CalculationsAnswer2') ?>">Ответ</a>
                 </div>
             </form>
         </div>
