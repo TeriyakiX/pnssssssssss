@@ -28,9 +28,9 @@
                     </h2>
                     <p2>Общая площадь учебных аудиторий по учебному заведению</p2>
                     <h2>
-                        <?= $subvision[0] ->roooms ->sum('S');?>
+                        <?= $subvision[0] ->roooms ->sum('S') + $subvision[1] ->roooms ->sum('S');?>
                     </h2>
-                    <a  class="but_logs"  href="<?= app()->route->getUrl('/Calculations') ?>">Ответ</a>
+                    <a  class="but_logs"  href="<?= app()->route->getUrl('/Calculations') ?>">Хорошо</a>
                 </div>
             </form>
         </div>

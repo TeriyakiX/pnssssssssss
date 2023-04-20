@@ -9,5 +9,16 @@ return [
         'auth' => \Middlewares\AuthMiddleware::class,
         'user' => \Middlewares\UserMiddleware::class,
         'admin' => \Middlewares\AdminMiddleware::class,
-    ]
+    ],
+
+    'validators' => [
+        'required' => \Validator\RequireValidator::class,
+        'unique' => \Validator\UniqueValidator::class,
+        'number' => \Validator\NumbersValidator::class,
+        'cyrillic' => \Validator\CyrillicValidator::class,
+        'all' => \Validator\AllValidator::class,
+        'image' => \Validator\ImageValidator::class,
+        'year' => \Validator\YearValidator::class,
+        'latinNumber' => \Validator\LatinNumberValidator::class,
+],
 ];

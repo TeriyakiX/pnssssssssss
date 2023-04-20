@@ -25,4 +25,8 @@ class Subvision extends Model
     {
         return $this->hasMany(Room::class,'type_room_id','id');
     }
+    public function rooooms()
+    {
+        return $this->hasMany(Room::class,'type_room_id');
+    }
 }

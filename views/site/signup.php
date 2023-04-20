@@ -15,8 +15,11 @@
                 <h2>Регистрация</h2>
             </div>
             <label class="inreg" > <input type="text" name="name" placeholder="Имя"></label>
+            <p class="Error"><?= $message['name'][0] ?? ''; ?></p>
             <label class="inreg" > <input type="text" name="login" placeholder="Логин"></label>
+            <p class="Error"><?= $message['login'][0] ?? ''; ?></p>
             <label class="inreg" > <input type="password" name="password" placeholder="Пароль"></label>
+            <p class="Error"><?= $message['password'][0] ?? ''; ?></p>
             <button class="but_log">Зарегистрироваться</button>
         </div>
     </form>

@@ -153,3 +153,10 @@ html {
     display: flex;
     flex-direction: column;
 }
+
+.Error{
+    margin-bottom: 15px;
+    text-align: center;
+    color: red;
+
+}

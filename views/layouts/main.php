@@ -24,6 +24,10 @@
             <a href="<?= app()->route->getUrl('/AddUser') ?>">Добавление пользователя</a>
             <a href="<?= app()->route->getUrl('/Calculations') ?>">Расчеты</a>
             <a href="<?= app()->route->getUrl('/logout') ?>">Выход (<?= app()->auth::user()->name ?>)</a>
+            <form  method="get" action="<?= app()->route->getUrl('/searchdb') ?>"  id="searchform">
+                <input  type="text" name="search">
+                <input class="search" type="submit" name="submit" value="Search">
+            </form>
         <?php
         endif;
         ?>
@@ -32,6 +36,10 @@
 <main>
     <?= $content ?? '' ?>
 </main>
-
+<footer>
+    <div class="fot_back">
+        <h2 class="fot_Author">Prod Dany</h2>
+    </div>
+</footer>
 </body>
 </html>

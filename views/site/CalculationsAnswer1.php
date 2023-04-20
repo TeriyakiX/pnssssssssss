@@ -28,7 +28,7 @@
                     <h2>
                         <?= $subvision[2] ->rooms ->sum('slot_prepod');?>
                     </h2>
-                    <a  class="but_logs"  href="<?= app()->route->getUrl('/Calculations') ?>">Ответ</a>
+                    <a  class="but_logs"  href="<?= app()->route->getUrl('/Calculations') ?>">Хорошо</a>
                 </div>
             </form>
         </div>
