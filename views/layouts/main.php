@@ -23,7 +23,7 @@
             <a href="<?= app()->route->getUrl('/Subdivisions') ?>">Подразделения</a>
             <a href="<?= app()->route->getUrl('/AddUser') ?>">Добавление пользователя</a>
             <a href="<?= app()->route->getUrl('/Calculations') ?>">Расчеты</a>
-            <a href="<?= app()->route->getUrl('/logout') ?>">Выход (<?= app()->auth::user()->name ?>)</a>
+            <a href="<?= app()->route->getUrl('/logout') ?>">Выход (<?= app()->auth::user()->name ?>)</a> <img class="img_user" src="/pnssssssssss/public/assets/img/<?= app()->auth::user()->photo ?>" alt="">
             <form  method="get" action="<?= app()->route->getUrl('/searchdb') ?>"  id="searchform">
                 <input  type="text" name="search">
                 <input class="search" type="submit" name="submit" value="Search">

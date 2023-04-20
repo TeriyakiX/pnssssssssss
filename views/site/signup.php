@@ -8,7 +8,7 @@
 </head>
 <main>
 <div class="login">
-    <form class="forml" method="post">
+    <form class="forml" method="post" enctype="multipart/form-data">
         <div class="back_log">
             <div class="log">
                 <h2>Регистрация</h2>
@@ -20,6 +20,9 @@
             <p class="Error"><?= $message['login'][0] ?? ''; ?></p>
             <label class="inreg" > <input type="password" name="password" placeholder="Пароль"></label>
             <p class="Error"><?= $message['password'][0] ?? ''; ?></p>
+            <label for="photo">Аватарка</label>
+            <input id="photo" name="photo" type="file">
+            <p class="Error"><?= $message['photo'][0] ?? ''; ?></p>
             <button class="but_log">Зарегистрироваться</button>
         </div>
     </form>

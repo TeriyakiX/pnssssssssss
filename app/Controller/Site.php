@@ -90,6 +90,7 @@ class Site
 
     public function signup(Request $request): string
     {
+
         if ($request->method === 'POST') {
 
             $validator = new Validator($request->all(), [
@@ -107,12 +108,15 @@ class Site
             if($validator->fails()){
                 return new View('site.signup',
                     ['message' => $validator->errors()]);
-            }
+            }   else{
 
-            if( User::create($request->all())){
-                app()->route->redirect('/login');
-            }
+            $project = User::create($request->all());
+            $project->photo($_FILES['photo']);
+            $project->save();
+            app()->route->redirect('/login');
         }
+        }
+
         return new View('site.signup');
     }
 
