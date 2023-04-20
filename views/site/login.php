@@ -19,7 +19,8 @@ if (!app()->auth::check()):
                 <div class="log">
                     <h2>Авторизация</h2>
                 </div>
-            <label class="inlogn" ><input type="text" name="login" placeholder="Логин"></label>
+                <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
+                <label class="inlogn" ><input type="text" name="login" placeholder="Логин"></label>
             <label class="inlogn" ><input type="password" name="password" placeholder="Пароль"></label>
             <button class="but_log" >Авторизоваться</button>
             </div>

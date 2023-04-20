@@ -59,10 +59,31 @@ class Site
     {
         return new View('site.SubdivisionsAnswer', ['message' => 'SubdivisionsAnswer']);
     }
+
     public function AddUser(Request $request): string
     {
-        if ($request->method === 'POST' && User::create($request->all())) {
-            app()->route->redirect('/hello');
+        if ($request->method === 'POST') {
+
+            $validator = new Validator($request->all(), [
+                'name' => ['required', 'cyrillic'],
+                'login' => ['required', 'unique:users,login', 'latinNumber'],
+                'password' => ['required', 'latinNumber']
+            ], [
+                'required' => 'Поле :field пусто',
+                'cyrillic' => 'Поле :field может состоять из кириллицы и латиницы',
+                'number' => 'Поле :field должно состоять из цифр',
+                'latinNumber' => 'Поле :field должно состоять из латинских букв или цифр',
+                'unique' => 'Поле :field должно быть уникально'
+            ]);
+
+            if($validator->fails()){
+                return new View('site.AddUser',
+                    ['message' => $validator->errors()]);
+            }
+
+            if( User::create($request->all())){
+                app()->route->redirect('/login');
+            }
         }
         return new View('site.AddUser');
     }
@@ -72,26 +93,28 @@ class Site
         if ($request->method === 'POST') {
 
             $validator = new Validator($request->all(), [
-                'name' => ['required'],
-                'login' => ['required', 'unique:users,login'],
-                'password' => ['required']
+                'name' => ['required', 'cyrillic'],
+                'login' => ['required', 'unique:users,login', 'latinNumber'],
+                'password' => ['required', 'latinNumber']
             ], [
                 'required' => 'Поле :field пусто',
+                'cyrillic' => 'Поле :field может состоять из кириллицы и латиницы',
+                'number' => 'Поле :field должно состоять из цифр',
+                'latinNumber' => 'Поле :field должно состоять из латинских букв или цифр',
                 'unique' => 'Поле :field должно быть уникально'
             ]);
 
             if($validator->fails()){
                 return new View('site.signup',
-                    ['message' => json_encode($validator->errors(), JSON_UNESCAPED_UNICODE)]);
+                    ['message' => $validator->errors()]);
             }
 
-            if (User::create($request->all())) {
+            if( User::create($request->all())){
                 app()->route->redirect('/login');
             }
         }
         return new View('site.signup');
     }
-
 
     public function roomView(Request $request): string
     {

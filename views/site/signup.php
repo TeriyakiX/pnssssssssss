@@ -7,13 +7,13 @@
     <title>pnssss</title>
 </head>
 <main>
-<h3><?= $message ?? ''; ?></h3>
 <div class="login">
     <form class="forml" method="post">
         <div class="back_log">
             <div class="log">
                 <h2>Регистрация</h2>
             </div>
+            <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
             <label class="inreg" > <input type="text" name="name" placeholder="Имя"></label>
             <p class="Error"><?= $message['name'][0] ?? ''; ?></p>
             <label class="inreg" > <input type="text" name="login" placeholder="Логин"></label>

@@ -9,6 +9,9 @@ return [
         'auth' => \Middlewares\AuthMiddleware::class,
         'user' => \Middlewares\UserMiddleware::class,
         'admin' => \Middlewares\AdminMiddleware::class,
+        'trim' => \Middlewares\TrimMiddleware::class,
+        'specialChars' => \Middlewares\SpecialCharsMiddleware::class,
+        'csrf' => \Middlewares\CSRFMiddleware::class,
     ],
 
     'validators' => [

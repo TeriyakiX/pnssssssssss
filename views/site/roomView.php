@@ -1,5 +1,8 @@
 <link rel="stylesheet" href="/pnssssssssss/public/css/subvision.css">
 <div class="sub">
+    <div class="img_settings">
+        <img class="img_room" src=" <?= $room-> img?>" alt="">
+    </div>
     <div class="sub_all">
                 <div class="sub_obj">
                     <h2><?= $room->name?></h2>
