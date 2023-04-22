@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b64e047d9bb151db8d71a449b6f496ae",
+    "content-hash": "bc22bdbb498dbfbc914afb97b67c521f",
     "packages": [
         {
             "name": "brick/math",
@@ -67,12 +67,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TeriyakiX/5lab_collection.git",
-                "reference": "98f1154308b09044e4b6ce4e52c6266e933c279c"
+                "reference": "c561575e5ec98d882a96bcf4dcb2db238beebd71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TeriyakiX/5lab_collection/zipball/98f1154308b09044e4b6ce4e52c6266e933c279c",
-                "reference": "98f1154308b09044e4b6ce4e52c6266e933c279c",
+                "url": "https://api.github.com/repos/TeriyakiX/5lab_collection/zipball/c561575e5ec98d882a96bcf4dcb2db238beebd71",
+                "reference": "c561575e5ec98d882a96bcf4dcb2db238beebd71",
                 "shasum": ""
             },
             "require": {
@@ -102,7 +102,39 @@
                 "issues": "https://github.com/TeriyakiX/5lab_collection/issues",
                 "source": "https://github.com/TeriyakiX/5lab_collection/tree/main"
             },
-            "time": "2023-04-22T02:11:47+00:00"
+            "time": "2023-04-22T03:28:03+00:00"
+        },
+        {
+            "name": "dany/collect5lab",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TeriyakiX/collect5lab.git",
+                "reference": "d0111cb082a32caef4b30503f38812f0cc011353"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TeriyakiX/collect5lab/zipball/d0111cb082a32caef4b30503f38812f0cc011353",
+                "reference": "d0111cb082a32caef4b30503f38812f0cc011353",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "project",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "dany"
+                }
+            ],
+            "description": "collect2",
+            "support": {
+                "issues": "https://github.com/TeriyakiX/collect5lab/issues",
+                "source": "https://github.com/TeriyakiX/collect5lab/tree/main"
+            },
+            "time": "2023-04-22T03:21:10+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -1443,7 +1475,8 @@
     "stability-flags": {
         "illuminate/database": 20,
         "illuminate/events": 20,
-        "nikic/fast-route": 20
+        "nikic/fast-route": 20,
+        "dany/collect5lab": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

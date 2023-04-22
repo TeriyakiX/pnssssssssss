@@ -16,7 +16,8 @@
         "nikic/fast-route": "^2.0@dev",
         "ext-json": "*",
         "ext-json": "*",
-        "danil/5lab": "dev-main"
+        "danil/5lab": "dev-main",
+        "dany/collect5lab": "dev-main"
     },
     "autoload": {
         "psr-4": {

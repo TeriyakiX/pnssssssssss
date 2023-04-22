@@ -4,7 +4,7 @@ namespace Middlewares;
 
 use Exception;
 use Src\Request;
-use function Collect\collection;
+use function Collect\collectionSession;
 
 class CSRFMiddleware
 {
@@ -14,7 +14,7 @@ class CSRFMiddleware
             return;
         }
         if (empty($request->get('csrf_token')) ||
-            $request->get('csrf_token')!==collection()->get('csrf_token')) {
+            $request->get('csrf_token')!==collectionSession()->get('csrf_token')) {
             throw new Exception('Request not authorized');
         }
     }
