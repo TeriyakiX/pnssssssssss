@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bc22bdbb498dbfbc914afb97b67c521f",
+    "content-hash": "38bd1e49c19debda437f2d3be4b275c8",
     "packages": [
         {
             "name": "brick/math",
@@ -67,12 +67,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TeriyakiX/5lab_collection.git",
-                "reference": "c561575e5ec98d882a96bcf4dcb2db238beebd71"
+                "reference": "ca2645466b88a4e9b43cd3c6c1d03989924736d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TeriyakiX/5lab_collection/zipball/c561575e5ec98d882a96bcf4dcb2db238beebd71",
-                "reference": "c561575e5ec98d882a96bcf4dcb2db238beebd71",
+                "url": "https://api.github.com/repos/TeriyakiX/5lab_collection/zipball/ca2645466b88a4e9b43cd3c6c1d03989924736d4",
+                "reference": "ca2645466b88a4e9b43cd3c6c1d03989924736d4",
                 "shasum": ""
             },
             "require": {
@@ -82,10 +82,10 @@
             "type": "project",
             "autoload": {
                 "files": [
-                    "src/helpers.php"
+                    "Src/helpers.php"
                 ],
                 "psr-4": {
-                    "Collect\\": "src/"
+                    "Sessions\\": "Src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -102,7 +102,7 @@
                 "issues": "https://github.com/TeriyakiX/5lab_collection/issues",
                 "source": "https://github.com/TeriyakiX/5lab_collection/tree/main"
             },
-            "time": "2023-04-22T03:28:03+00:00"
+            "time": "2023-04-22T04:16:40+00:00"
         },
         {
             "name": "dany/collect5lab",
@@ -110,16 +110,27 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TeriyakiX/collect5lab.git",
-                "reference": "d0111cb082a32caef4b30503f38812f0cc011353"
+                "reference": "26936da6bb28ca9ef58438b88ab7a8d1633a08c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TeriyakiX/collect5lab/zipball/d0111cb082a32caef4b30503f38812f0cc011353",
-                "reference": "d0111cb082a32caef4b30503f38812f0cc011353",
+                "url": "https://api.github.com/repos/TeriyakiX/collect5lab/zipball/26936da6bb28ca9ef58438b88ab7a8d1633a08c8",
+                "reference": "26936da6bb28ca9ef58438b88ab7a8d1633a08c8",
                 "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 | ^8.0"
             },
             "default-branch": true,
             "type": "project",
+            "autoload": {
+                "files": [
+                    "Src/helpers.php"
+                ],
+                "psr-4": {
+                    "Collect\\": "Src/"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -134,7 +145,7 @@
                 "issues": "https://github.com/TeriyakiX/collect5lab/issues",
                 "source": "https://github.com/TeriyakiX/collect5lab/tree/main"
             },
-            "time": "2023-04-22T03:21:10+00:00"
+            "time": "2023-04-22T04:20:09+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -1476,13 +1487,12 @@
         "illuminate/database": 20,
         "illuminate/events": 20,
         "nikic/fast-route": 20,
-        "dany/collect5lab": 20
+        "danil/5lab": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4 | ^8.0",
-        "ext-json": "*"
+        "php": "^7.4 | ^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"

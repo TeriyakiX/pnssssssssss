@@ -2,7 +2,7 @@
 
 namespace Src\Auth;
 
-use function Collect\collectionSession;
+use function Sessions\collectionSession;
 
 class Auth
 {
