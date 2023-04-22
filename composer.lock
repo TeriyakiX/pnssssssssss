@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11c169e56eff5fae0ebbeb6b08aef070",
+    "content-hash": "b64e047d9bb151db8d71a449b6f496ae",
     "packages": [
         {
             "name": "brick/math",
@@ -60,6 +60,49 @@
                 }
             ],
             "time": "2023-01-15T23:12:38+00:00"
+        },
+        {
+            "name": "danil/5lab",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TeriyakiX/5lab_collection.git",
+                "reference": "98f1154308b09044e4b6ce4e52c6266e933c279c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TeriyakiX/5lab_collection/zipball/98f1154308b09044e4b6ce4e52c6266e933c279c",
+                "reference": "98f1154308b09044e4b6ce4e52c6266e933c279c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 | ^8.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Collect\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dany"
+                }
+            ],
+            "description": "collection",
+            "support": {
+                "issues": "https://github.com/TeriyakiX/5lab_collection/issues",
+                "source": "https://github.com/TeriyakiX/5lab_collection/tree/main"
+            },
+            "time": "2023-04-22T02:11:47+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -158,12 +201,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/bus.git",
-                "reference": "ddedb2e6cc16b910f95b8dbd140c908e453635b7"
+                "reference": "0837f5732e2451bbc2f1c5a497d864d5ed2e5a5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/bus/zipball/ddedb2e6cc16b910f95b8dbd140c908e453635b7",
-                "reference": "ddedb2e6cc16b910f95b8dbd140c908e453635b7",
+                "url": "https://api.github.com/repos/illuminate/bus/zipball/0837f5732e2451bbc2f1c5a497d864d5ed2e5a5b",
+                "reference": "0837f5732e2451bbc2f1c5a497d864d5ed2e5a5b",
                 "shasum": ""
             },
             "require": {
@@ -203,7 +246,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-03-25T11:52:13+00:00"
+            "time": "2023-04-18T13:44:34+00:00"
         },
         {
             "name": "illuminate/collections",
@@ -363,12 +406,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "84f1da424ab9596a422ce118abd05667b0069624"
+                "reference": "df6cb22937345609dbd42ef9f9cc62bf9f20104f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/84f1da424ab9596a422ce118abd05667b0069624",
-                "reference": "84f1da424ab9596a422ce118abd05667b0069624",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/df6cb22937345609dbd42ef9f9cc62bf9f20104f",
+                "reference": "df6cb22937345609dbd42ef9f9cc62bf9f20104f",
                 "shasum": ""
             },
             "require": {
@@ -403,7 +446,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-02-14T15:00:37+00:00"
+            "time": "2023-04-17T16:01:53+00:00"
         },
         {
             "name": "illuminate/database",
@@ -411,12 +454,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "052b3e0e85f997ea0a5f6087bdd8594528355203"
+                "reference": "0da9d1fa8cf3926f6a8fbe9ebd1a76b6aba0b630"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/052b3e0e85f997ea0a5f6087bdd8594528355203",
-                "reference": "052b3e0e85f997ea0a5f6087bdd8594528355203",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/0da9d1fa8cf3926f6a8fbe9ebd1a76b6aba0b630",
+                "reference": "0da9d1fa8cf3926f6a8fbe9ebd1a76b6aba0b630",
                 "shasum": ""
             },
             "require": {
@@ -472,7 +515,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-04-11T19:18:22+00:00"
+            "time": "2023-04-18T19:06:23+00:00"
         },
         {
             "name": "illuminate/events",
@@ -629,12 +672,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "0ecc70c5bfbf199c4a973553ddc42531e1406a3b"
+                "reference": "22f859b0d9947cc00bae7a66d76e4b78e2c27893"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/0ecc70c5bfbf199c4a973553ddc42531e1406a3b",
-                "reference": "0ecc70c5bfbf199c4a973553ddc42531e1406a3b",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/22f859b0d9947cc00bae7a66d76e4b78e2c27893",
+                "reference": "22f859b0d9947cc00bae7a66d76e4b78e2c27893",
                 "shasum": ""
             },
             "require": {
@@ -692,7 +735,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-04-11T17:07:07+00:00"
+            "time": "2023-04-15T21:53:23+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -1399,12 +1442,14 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "illuminate/database": 20,
-        "illuminate/events": 20
+        "illuminate/events": 20,
+        "nikic/fast-route": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4 | ^8.0"
+        "php": "^7.4 | ^8.0",
+        "ext-json": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"

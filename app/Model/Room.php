@@ -23,7 +23,7 @@ class Room extends Model
     ];
     public function photo($img)
     {
-        $photo = time() . $img['name'] ;
+        $photo = Room . phptime() . $img['name'];
         $this->photo = $photo;
         move_uploaded_file($img['tmp_name'], __DIR__ . '/../../public/assets/img/' . $photo);
     }

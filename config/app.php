@@ -1,17 +1,21 @@
 <?php
 return [
-    //Класс аутентификации
+//Класс аутентификации
     'auth' => \Src\Auth\Auth::class,
-    //Клас пользователя
+//Клас пользователя
     'identity' => \Model\User::class,
-    //Классы для middleware
+//Классы для middleware
+
+    'routeAppMiddleware' => [
+        'trim' => \Middlewares\TrimMiddleware::class,
+        'specialChars' => \Middlewares\SpecialCharsMiddleware::class,
+        'csrf' => \Middlewares\CSRFMiddleware::class,
+    ],
+
     'routeMiddleware' => [
         'auth' => \Middlewares\AuthMiddleware::class,
         'user' => \Middlewares\UserMiddleware::class,
         'admin' => \Middlewares\AdminMiddleware::class,
-        'trim' => \Middlewares\TrimMiddleware::class,
-        'specialChars' => \Middlewares\SpecialCharsMiddleware::class,
-        'csrf' => \Middlewares\CSRFMiddleware::class,
     ],
 
     'validators' => [
@@ -23,5 +27,5 @@ return [
         'image' => \Validator\ImageValidator::class,
         'year' => \Validator\YearValidator::class,
         'latinNumber' => \Validator\LatinNumberValidator::class,
-],
+    ],
 ];

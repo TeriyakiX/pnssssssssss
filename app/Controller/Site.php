@@ -106,15 +106,14 @@ class Site
             ]);
 
             if($validator->fails()){
-                return new View('site.signup',
-                    ['message' => $validator->errors()]);
+                return new View('site.signup', ['message' => $validator->errors()]);
             }   else{
 
             $project = User::create($request->all());
             $project->photo($_FILES['photo']);
             $project->save();
             app()->route->redirect('/login');
-        }
+             }
         }
 
         return new View('site.signup');
@@ -133,10 +132,12 @@ class Site
         if ($request->method === 'GET') {
             return new View('site.login');
         }
+
         //Если удалось аутентифицировать пользователя, то редирект
         if (Auth::attempt($request->all())) {
             app()->route->redirect('/hello');
         }
+
         //Если аутентификация не удалась, то сообщение об ошибке
         return new View('site.login', ['message' => 'Неправильные логин или пароль']);
     }
