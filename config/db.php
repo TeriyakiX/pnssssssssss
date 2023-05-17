@@ -2,9 +2,9 @@
 return [
     'driver' => 'mysql',
     'host' => 'localhost',
-    'database' => 'project',
+    'database' => 'address_book',
     'username' => 'root',
-    'password' => '',
+    'password' => 'QWEasd123',
     'charset' => 'utf8',
     'collation' => 'utf8_unicode_ci',
     'prefix' => '',

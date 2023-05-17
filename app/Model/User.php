@@ -15,8 +15,9 @@ class User extends Model implements IdentityInterface
         'name',
         'login',
         'password',
-        'role',
-        'img'
+        'phone_number',
+        'adress',
+        'role_user'
     ];
 
     protected static function booted()
@@ -45,11 +46,5 @@ class User extends Model implements IdentityInterface
         return self::where(['login' => $credentials['login'],
             'password' => md5($credentials['password'])])->first();
     }
-
-    public function photo($img)
-    {
-        $photo = User . phptime() . $img['name'];
-        $this->photo = $photo;
-        move_uploaded_file($img['tmp_name'], __DIR__ . '/../../public/assets/img/' . $photo);
-    }
+    
 }

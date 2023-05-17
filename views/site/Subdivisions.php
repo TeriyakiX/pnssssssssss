@@ -5,31 +5,24 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/pnssssssssss/public/css/subvision.css">
+    <link rel="stylesheet" href="/lab3/public/css/subvision.css">
     <title>pnssss</title>
 </head>
 <header>
-    <nav class="nav_sub">
-            <a href="<?= app()->route->getUrl('/Subdivisions') ?>">Главный корпус</a>
-            <a href="<?= app()->route->getUrl('/Subdivisions2') ?>">Второй корпус</a>
-            <a href="<?= app()->route->getUrl('/Subdivisions3') ?>">Третий корпус</a>
-    </nav>
 </header>
 <main>
     <div class="sub">
         <div class="sub_all">
             <?php
-            foreach ($room as $rooom) {
+            foreach ($room as $book) {
             ?>
                 <?php
-                    if ($rooom->type_sub == 1):
                         ?>
                             <div class="sub_obj">
-                                <a href="<?= app()->route->getUrl('/roomView') ?>?id=<?= $rooom->id ?>"><?= $rooom->name?></a>
+                                <a href="<?= app()->route->getUrl('/roomView') ?>?id=<?= $book->id ?>"><?= $book->user?></a>
 
                             </div>
                     <?php
-                    endif;
                 ?>
                 <?php
             }

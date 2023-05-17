@@ -19,14 +19,14 @@ class Subvision extends Model
 
     public function rooms()
     {
-        return $this->hasMany(Room::class,'type_sub','id');
+        return $this->hasMany(Adressbook::class,'type_sub','id');
     }
     public function roooms()
     {
-        return $this->hasMany(Room::class,'type_room_id','id');
+        return $this->hasMany(Adressbook::class,'type_room_id','id');
     }
     public function rooooms()
     {
-        return $this->hasMany(Room::class,'type_room_id');
+        return $this->hasMany(Adressbook::class,'type_room_id');
     }
 }

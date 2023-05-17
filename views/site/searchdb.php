@@ -1,13 +1,13 @@
-<link rel="stylesheet" href="/pnssssssssss/public/css/subvision.css">
+<link rel="stylesheet" href="/lab3/public/css/subvision.css">
 <div class="sub">
             <p>
             <div class="sub">
                 <div class="sub_all">
                     <?php
-                    foreach ($room as $rooom) {
+                    foreach ($room as $book) {
                         ?>
                             <div class="sub_obj">
-                                <a href="<?= app()->route->getUrl('/roomView') ?>?id=<?= $rooom->id ?>"><?= $rooom->name?></a>
+                                <a href="<?= app()->route->getUrl('/roomView') ?>?id=<?= $book->id ?>"><?= $book->phone_number?></a>
 
                             </div>
                         <?php

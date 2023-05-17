@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/pnssssssssss/public/css/style.css">
+    <link rel="stylesheet" href="/lab3/public/css/style.css">
     <title>pnssss</title>
 </head>
 <body>
@@ -20,10 +20,9 @@
         <?php
         else:
             ?>
-            <a href="<?= app()->route->getUrl('/Subdivisions') ?>">Подразделения</a>
+            <a href="<?= app()->route->getUrl('/Subdivisions') ?>">Адресная книжкка</a>
             <a href="<?= app()->route->getUrl('/AddUser') ?>">Добавление пользователя</a>
-            <a href="<?= app()->route->getUrl('/Calculations') ?>">Расчеты</a>
-            <a href="<?= app()->route->getUrl('/logout') ?>">Выход (<?= app()->auth::user()->name ?>)</a> <img class="img_user" src="/pnssssssssss/public/assets/img/<?= app()->auth::user()->photo ?>" alt="">
+            <a href="<?= app()->route->getUrl('/logout') ?>">Выход (<?= app()->auth::user()->name ?>)</a>
             <form  method="get" action="<?= app()->route->getUrl('/searchdb') ?>"  id="searchform">
                 <input  type="text" name="search">
                 <input class="search" type="submit" name="submit" value="Search">

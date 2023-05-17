@@ -2,8 +2,9 @@
 
 namespace Controller;
 
+use Model\Adress_book;
 use Model\Post;
-use Model\Room;
+use Model\Adressbook;
 use Model\Subvision;
 use Src\View;
 use Src\Request;
@@ -25,18 +26,18 @@ class Site
     }
     public function Subdivisions(): string
     {
-        $room = Room::all();
+        $room = Adress_book::all();
         return new View('site.Subdivisions', ['room' => $room]);
     }
     public function Subdivisions2(): string
     {
-        $room = Room::all();
+        $room = Adress_book::all();
         return new View('site.Subdivisions2', ['room' => $room]);
     }
 
     public function Subdivisions3(): string
     {
-        $room = Room::all();
+        $room = Adress_book::all();
         return new View('site.Subdivisions3', ['room' => $room]);
     }
 
@@ -121,7 +122,7 @@ class Site
 
     public function roomView(Request $request): string
     {
-       $room = Room::where('id', $request->id)->first();
+       $room = Adress_book::where('id', $request->id)->first();
         //var_dump($room[0]->name); die();
         return (new View())->render('site.roomView', ['room' => $room]);
     }
@@ -151,7 +152,7 @@ class Site
     public function searchdb(Request $request): string
     {
        // var_dump($request->search); die();
-        $room = Room::where('name','LIKE',"%{$request->search}%")->get();
+        $room = Adress_book::where('phone_number','LIKE',"%{$request->search}%")->get();
 
         //var_dump($room[0]); die();
         return (new View())->render('site.searchdb', ['room' => $room]);

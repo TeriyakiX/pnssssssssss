@@ -3,7 +3,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/pnssssssssss/public/style.css">
+    <link rel="stylesheet" href="/lab3/public/css/style.css">
     <title>pnssss</title>
 </head>
 <main>
@@ -15,21 +15,13 @@
             </div>
             <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
             <label class="inreg" > <input type="text" name="name" placeholder="Имя"></label>
-            <p class="Error"><?= $message['name'][0] ?? ''; ?></p>
             <label class="inreg" > <input type="text" name="login" placeholder="Логин"></label>
-            <p class="Error"><?= $message['login'][0] ?? ''; ?></p>
             <label class="inreg" > <input type="password" name="password" placeholder="Пароль"></label>
-            <p class="Error"><?= $message['password'][0] ?? ''; ?></p>
-            <label for="photo">Аватарка</label>
-            <input id="photo" name="photo" type="file">
-            <p class="Error"><?= $message['photo'][0] ?? ''; ?></p>
+            <label class="inreg" > <input type="text" name="phone_number" placeholder="Номер телефона"></label>
+            <label class="inreg" > <input type="text" name="adress" placeholder="Адресс"></label>
             <button class="but_log">Зарегистрироваться</button>
         </div>
     </form>
 </div>
 </main>
-<footer>
-    <div class="fot_back">
-        <h2 class="fot_Author">Prod Dany</h2>
-    </div>
-</footer>
+
