@@ -12,24 +12,22 @@
 <header>
     <nav class="nav">
         <a href="<?= app()->route->getUrl('/hello') ?>">Главная</a>
+        <a href="<?= app()->route->getUrl('/news') ?>">Новости</a>
+        <a href="<?= app()->route->getUrl('/Subdivisions') ?>">Адресная книжкка</a>
         <?php
-        if (!app()->auth::check()):
-            ?>
+        if (!app()->auth::check()):?>
             <a href="<?= app()->route->getUrl('/login') ?>">Вход</a>
             <a href="<?= app()->route->getUrl('/signup') ?>">Регистрация</a>
-        <?php
-        else:
-            ?>
-            <a href="<?= app()->route->getUrl('/Subdivisions') ?>">Адресная книжкка</a>
-            <a href="<?= app()->route->getUrl('/AddUser') ?>">Добавление пользователя</a>
+        <?php else: ?>
             <a href="<?= app()->route->getUrl('/logout') ?>">Выход (<?= app()->auth::user()->name ?>)</a>
             <form  method="get" action="<?= app()->route->getUrl('/searchdb') ?>"  id="searchform">
-                <input  type="text" name="search">
+                <input type="text" name="search">
                 <input class="search" type="submit" name="submit" value="Search">
             </form>
-        <?php
-        endif;
-        ?>
+        <?php endif; ?>
+        <?php if (!app()->auth::checkrole()):?>
+            <a href="<?= app()->route->getUrl('/AddUser') ?>">Добавление пользователя в адресную книгу</a>
+        <?php endif; ?>
     </nav>
 </header>
 <main>

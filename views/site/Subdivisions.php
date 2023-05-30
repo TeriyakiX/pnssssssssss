@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="/lab3/public/css/subvision.css">
     <title>pnssss</title>
 </head>
-<header>
-</header>
+
 <main>
     <div class="sub">
         <div class="sub_all">

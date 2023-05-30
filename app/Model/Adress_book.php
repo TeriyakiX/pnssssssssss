@@ -12,9 +12,22 @@ class Adress_book extends Model
     public $timestamps = false;
     public $table = 'adress_book';
     protected $fillable = [
-        'id',
         'adress',
         'phone_number',
         'user',
+        'role_userr'
     ];
+
+    protected static function booted()
+    {
+        static::created(function ($adress_book) {
+            $adress_book->save();
+        });
+    }
+    public function findIdentity(int $id)
+    {
+        return self::where('id', $id)->first();
+    }
+
+
 }

@@ -7,12 +7,13 @@
                     foreach ($room as $book) {
                         ?>
                             <div class="sub_obj">
-                                <a href="<?= app()->route->getUrl('/roomView') ?>?id=<?= $book->id ?>"><?= $book->phone_number?></a>
+                                <a href="<?= app()->route->getUrl('/roomView') ?>?id=<?= $book->id ?>"><?= $book->adress?></a>
 
                             </div>
                         <?php
                     }
                     ?>
+                    
         </div>
     </div>
 </div>

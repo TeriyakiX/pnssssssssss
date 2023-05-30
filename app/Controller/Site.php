@@ -4,6 +4,7 @@ namespace Controller;
 
 use Model\Adress_book;
 use Model\Post;
+use Model\News;
 use Model\Adressbook;
 use Model\Subvision;
 use Src\View;
@@ -14,76 +15,37 @@ use Src\Validator\Validator;
 
 class Site
 {
-    public function index(Request $request): string
+
+    public function news(Request $request): string
     {
-        $posts = Post::where('id', $request->id)->get();
-        return (new View())->render('site.post', ['posts' => $posts]);
+        $news = News::all();
+        return new View('site.news', ['news' => $news]);
+    }
+    public function newsview(Request $request): string
+    {
+        $news = News::where('id', $request->id)->first();
+        //var_dump($room[0]->name); die();
+        return (new View())->render('site.newsview', ['news' => $news]);
     }
 
     public function hello(): string
     {
         return new View('site.hello', ['message' => 'hello working']);
     }
+
     public function Subdivisions(): string
     {
         $room = Adress_book::all();
         return new View('site.Subdivisions', ['room' => $room]);
-    }
-    public function Subdivisions2(): string
-    {
-        $room = Adress_book::all();
-        return new View('site.Subdivisions2', ['room' => $room]);
-    }
-
-    public function Subdivisions3(): string
-    {
-        $room = Adress_book::all();
-        return new View('site.Subdivisions3', ['room' => $room]);
-    }
-
-    public function Calculations(): string
-    {
-        return new View('site.Calculations',);
-    }
-    public function CalculationsAnswer1(): string
-    {
-        $subvision = Subvision::all();
-        return new View('site.CalculationsAnswer1', ['subvision' => $subvision]);
-    }
-    public function CalculationsAnswer2(): string
-    {
-        $subvision = Subvision::all();
-        return new View('site.CalculationsAnswer2', ['subvision' => $subvision]);
-    }
-
-    public function SubdivisionsAnswer(): string
-    {
-        return new View('site.SubdivisionsAnswer', ['message' => 'SubdivisionsAnswer']);
     }
 
     public function AddUser(Request $request): string
     {
         if ($request->method === 'POST') {
 
-            $validator = new Validator($request->all(), [
-                'name' => ['required', 'cyrillic'],
-                'login' => ['required', 'unique:users,login', 'latinNumber'],
-                'password' => ['required', 'latinNumber']
-            ], [
-                'required' => 'Поле :field пусто',
-                'cyrillic' => 'Поле :field может состоять из кириллицы и латиницы',
-                'number' => 'Поле :field должно состоять из цифр',
-                'latinNumber' => 'Поле :field должно состоять из латинских букв или цифр',
-                'unique' => 'Поле :field должно быть уникально'
-            ]);
-
-            if($validator->fails()){
-                return new View('site.AddUser',
-                    ['message' => $validator->errors()]);
-            }
-
-            if( User::create($request->all())){
-                app()->route->redirect('/login');
+            if($address_book = Adress_book::create($request->all())){
+                $address_book->save();
+                app()->route->redirect('/Subdivisions');
             }
         }
         return new View('site.AddUser');
@@ -110,9 +72,7 @@ class Site
                 return new View('site.signup', ['message' => $validator->errors()]);
             }   else{
 
-            $project = User::create($request->all());
-            $project->photo($_FILES['photo']);
-            $project->save();
+            $address_book = User::create($request->all());
             app()->route->redirect('/login');
              }
         }
@@ -152,7 +112,7 @@ class Site
     public function searchdb(Request $request): string
     {
        // var_dump($request->search); die();
-        $room = Adress_book::where('phone_number','LIKE',"%{$request->search}%")->get();
+        $room = Adress_book::where('adress','LIKE',"%{$request->search}%")->get();
 
         //var_dump($room[0]); die();
         return (new View())->render('site.searchdb', ['room' => $room]);
