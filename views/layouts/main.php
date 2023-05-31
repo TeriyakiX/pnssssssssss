@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/lab3/public/css/style.css">
-    <title>pnssss</title>
+    <title>lab3-4</title>
 </head>
 <body>
 <header>
@@ -25,18 +25,16 @@
                 <input class="search" type="submit" name="submit" value="Search">
             </form>
         <?php endif; ?>
+
         <?php if (!app()->auth::checkrole()):?>
-            <a href="<?= app()->route->getUrl('/AddUser') ?>">Добавление пользователя в адресную книгу</a>
+            <a href="<?= app()->route->getUrl('/addAdressBook') ?>">Добавление пользователя в адресную книгу</a>
+            <a href="<?= app()->route->getUrl('/newsCreate') ?>">Добавление новости</a>
         <?php endif; ?>
     </nav>
 </header>
 <main>
+    <img class="img_main" style="width: 100%; height: 91%" src="https://i.gifer.com/xK.gif" alt="" >
     <?= $content ?? '' ?>
 </main>
-<footer>
-    <div class="fot_back">
-        <h2 class="fot_Author">Prod Dany</h2>
-    </div>
-</footer>
 </body>
 </html>

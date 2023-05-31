@@ -21,7 +21,7 @@
     margin: 5px;
     border: 1px solid black;
     cursor: pointer;
-    background-color: teal;
+    background-color: cornflowerblue;
     text-decoration: none  ;
     color: white;
 }
@@ -39,7 +39,7 @@
     margin: 5px;
     border: 1px solid black;
     cursor: pointer;
-    background-color: teal;
+    background-color: cornflowerblue;
     text-decoration: none  ;
     color: white;
     width: 200px;
@@ -50,7 +50,7 @@
      margin: 5px;
      border: 1px solid black;
      cursor: pointer;
-     background-color: teal;
+     background-color: cornflowerblue;
      text-decoration: none  ;
      color: white;
      width: 300px;
@@ -65,7 +65,7 @@
     padding: 5px;
     margin: 5px;
     border: 1px solid black;
-    background-color: teal;
+    background-color: cornflowerblue;
     text-decoration: none  ;
     color: white;
 }
@@ -88,7 +88,7 @@ align-items: center;
     justify-content: center;
     padding: 5px;
     box-sizing: border-box;
-    background-color: teal;
+    background-color: cornflowerblue;
 
 }
 .nav_sub a {

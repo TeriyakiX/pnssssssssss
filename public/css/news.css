@@ -1,0 +1,28 @@
+.news_obj a {
+    text-decoration: none;
+    color: white;
+}
+
+.news {
+    border: 1px solid white;
+    width: 200px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.news_place {
+    margin-top: 50px;
+}
+.news_img {
+    display: flex;
+    justify-content: end;
+}
+.news_detail h2{
+    border: 1px solid white;
+    width: 500px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.news_detail a{
+    text-decoration: none;
+    color: white;
+}

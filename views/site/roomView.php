@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/lab3/public/css/subvision.css">
+
 <div class="sub">
     <div class="sub_all">
                 <div class="sub_obj">

@@ -48,7 +48,7 @@ class Site
                 app()->route->redirect('/Subdivisions');
             }
         }
-        return new View('site.AddUser');
+        return new View('site.addAdressBook');
     }
 
     public function signup(Request $request): string
@@ -118,7 +118,19 @@ class Site
         return (new View())->render('site.searchdb', ['room' => $room]);
     }
 
+    public function newsCreate(Request $request): string
+    {
+
+        if ($request->method === 'POST') {
+
+                $project = News::create($request->all());
+                $project->photo($_FILES['photo']);
+                $project->save();
+                app()->route->redirect('/news');
 
 
+        }
+        return new View('site.newsCreate');
 
+    }
 }

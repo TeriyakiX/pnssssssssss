@@ -60,7 +60,7 @@ class Auth
 
     public static function checkrole(): bool
     {
-        if (self::user()-> role_user =='') {
+        if (self::user()-> role_user =='phisycal' or  self::user()-> role_user =='') {
             return true;
         }
         return false;

@@ -1,11 +1,10 @@
 @import "calc.css";
 @import "subvision.css";
+@import "news.css";
 
-html {
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
+* {
+    margin: 0;
+    padding: 0;
 }
 .nav {
     color: red;
@@ -13,8 +12,7 @@ html {
     justify-content: center;
     padding: 5px;
     box-sizing: border-box;
-    background-color: teal;
-
+    background-color: cornflowerblue;
 }
 .nav a {
     text-decoration: none;
@@ -51,8 +49,8 @@ html {
     display: flex;
     padding: 30px;
     flex-direction: column;
-    border: 1px solid teal;
-    background-color: teal;
+    border: 1px solid cornflowerblue;
+    background-color: cornflowerblue;
     border-radius: 20px;
     align-items: center;
     justify-content: center;
@@ -82,7 +80,7 @@ html {
     width: 1200px;
 }
 .but_logs:hover {
-    background: #00c8c8;
+    background: cornflowerblue;
     margin: 5px;
     border: 1px solid  black;
     cursor: pointer;
@@ -104,7 +102,7 @@ html {
 .fot_back{
     display: flex;
     box-sizing: border-box;
-    background-color: teal;
+    background-color: cornflowerblue;
     color: white;
     padding: 5px;
     width: 100%;
@@ -132,8 +130,8 @@ html {
     display: flex;
     padding: 70px;
     flex-direction: column;
-    border: 1px solid teal;
-    background-color: teal;
+    border: 1px solid cornflowerblue;
+    background-color: cornflowerblue;
     border-radius: 20px;
     align-items: center;
     justify-content: center;
@@ -172,4 +170,8 @@ html {
     width: 50px;
     height: 50px;
     margin-right: 50px;
+}
+.img_main {
+    position: absolute;
+    z-index: -10;
 }
