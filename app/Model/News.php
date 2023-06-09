@@ -12,6 +12,7 @@ class News extends Model
     public $timestamps = false;
     public $table = 'news';
     protected $fillable = [
+        'id',
         'discription',
         'title',
         'photo'
@@ -21,12 +22,17 @@ class News extends Model
     {
         return $this->delete();
     }
-    public function updateNews(array $data): bool
-    {
-        return $this->update([
-            'discription' => $data['discription'],
-            'title' => $data['title'],
-        ]);
+    public function newsUpdate($id, $data) {
+        $news = News::find($id);
+        if (!$news) {
+            return false;
+        }
+
+        $news->discription = $data['discription'];
+        $news->title = $data['title'];
+        $news->photo = $data['photo'];
+
+        return $news->save();
     }
 
     public function photo($img)

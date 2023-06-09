@@ -34,4 +34,7 @@
 .news_detail a{
     text-decoration: none;
     color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
 }
