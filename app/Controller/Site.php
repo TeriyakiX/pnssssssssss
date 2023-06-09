@@ -133,4 +133,15 @@ class Site
         return new View('site.newsCreate');
 
     }
+    public function newsUpdate(Request $request, $id)
+    {
+        $news = News::updateNews($id);
+
+
+        $news->updateNews();
+
+        return new View('site.newsUpdate');
+    }
+
+
 }

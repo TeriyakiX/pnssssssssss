@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/lab3/public/css/style.css">
-    <title>lab3-4</title>
+    <title>lab3-4</title>newsUpdate
 </head>
 <body>
 <header>
@@ -33,7 +33,7 @@
     </nav>
 </header>
 <main>
-    <img class="img_main" style="width: 100%; height: 91%" src="https://i.gifer.com/xK.gif" alt="" >
+    <img class="img_main" style="width: 100%; height: 96.1%" src="https://i.gifer.com/xK.gif" alt="" >
     <?= $content ?? '' ?>
 </main>
 </body>

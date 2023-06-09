@@ -1,6 +1,6 @@
 .sub {
     padding: 50px;
-    height: 300px;
+    height: 521px;
     display: flex;
     justify-content: center;
 
@@ -10,7 +10,7 @@
     flex-direction: column;
     color: white;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 50px;
     margin-top: 50px;
     height: 300px;
@@ -19,7 +19,7 @@
 .sub_all a {
     padding: 5px;
     margin: 5px;
-    border: 1px solid black;
+    border: 1px solid white;
     cursor: pointer;
     background-color: cornflowerblue;
     text-decoration: none  ;
@@ -28,7 +28,7 @@
 .sub_all a:hover {
     padding: 5px;
     margin: 5px;
-    border: 1px solid black;
+    border: 1px solid white;
     cursor: pointer;
     background-color: #00c8c8;
     text-decoration: none  ;
@@ -37,7 +37,7 @@
 .sub_all a {
     padding: 5px;
     margin: 5px;
-    border: 1px solid black;
+    border: 1px solid white;
     cursor: pointer;
     background-color: cornflowerblue;
     text-decoration: none  ;
@@ -48,7 +48,7 @@
  .sub_all h2 {
      padding: 5px;
      margin: 5px;
-     border: 1px solid black;
+     border: 1px solid white;
      cursor: pointer;
      background-color: cornflowerblue;
      text-decoration: none  ;
@@ -64,7 +64,7 @@
 .sub_answer h2 {
     padding: 5px;
     margin: 5px;
-    border: 1px solid black;
+    border: 1px solid white;
     background-color: cornflowerblue;
     text-decoration: none  ;
     color: white;

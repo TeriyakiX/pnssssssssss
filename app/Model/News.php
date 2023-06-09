@@ -17,10 +17,24 @@ class News extends Model
         'photo'
     ];
 
+    public function deleteNews($id)
+    {
+        return $this->delete();
+    }
+    public function updateNews(array $data): bool
+    {
+        return $this->update([
+            'discription' => $data['discription'],
+            'title' => $data['title'],
+        ]);
+    }
+
     public function photo($img)
     {
-        $photo = time() . $img['name'];
+        $photo = time().$img['name'];
         $this->photo = $photo;
-        move_uploaded_file($img['tmp_name'],  __DIR__ . '/lab3/public//img/' . $photo);
+//        var_dump($img['tmp_name'],  '../../public/assets/img/' . $photo); die;
+        move_uploaded_file($img['tmp_name'], '../../public/assets/img/' . $photo);
     }
+
 }

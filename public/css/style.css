@@ -5,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 .nav {
     color: red;
@@ -22,6 +23,10 @@
 .log {
     display: flex;
     justify-content: center;
+    color: white;
+}
+.log h1{
+    color: white;
 }
 .login {
     display: flex;
@@ -58,7 +63,7 @@
 .but_log {
     background: white;
     margin: 5px;
-    border: 1px solid  black;
+    border: 1px solid  white;
     cursor: pointer;
     border-radius: 20px;
     text-align: center;
@@ -71,33 +76,33 @@
 .but_logs {
     background: white;
     margin: 5px;
-    border: 1px solid  black;
+    border: 1px solid  white;
     cursor: pointer;
     border-radius: 20px;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: white;
     width: 1200px;
 }
 .but_logs:hover {
     background: cornflowerblue;
     margin: 5px;
-    border: 1px solid  black;
+    border: 1px solid  white;
     cursor: pointer;
     border-radius: 20px;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .but_log:hover {
     background: #00c8c8;
     margin: 5px;
-    border: 1px solid  black;
+    border: 1px solid  white;
     cursor: pointer;
     border-radius: 20px;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .fot_back{
     display: flex;
@@ -166,12 +171,10 @@
 
 }
 
-.img_user {
-    width: 50px;
-    height: 50px;
-    margin-right: 50px;
-}
 .img_main {
     position: absolute;
     z-index: -10;
+    width: 100%;
+    height: 100%;
+
 }
