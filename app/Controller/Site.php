@@ -152,7 +152,7 @@ class Site
         if ($request->method === 'POST') {
 
             $news = News::where('id', $request->id)->get();
-            $news->delete();
+            $news->each->delete();
             app()->route->redirect('/news');
 
         }
