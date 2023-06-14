@@ -3,8 +3,11 @@
         <div class="news_detail">
             <h2>Описание: <?= $news->discription?></h2>
             <h2>Основаная часть: <?= $news->title?></h2>
-            <a href="<?= app()->route->getUrl('/newsUpdate') ?>?id=<?= $newss->id ?>">
+            <a href="<?= app()->route->getUrl('/newsUpdate') ?>?id=<?= $news->id ?>">
                 Редактирование новсти
+            </a>
+            <a href="<?= app()->route->getUrl('/newsDestroy') ?>?id=<?= $news->id ?>">
+                Удаление новсти
             </a>
 
             <a href="<?= app()->route->getUrl('/news') ?>">Хорошо</a>

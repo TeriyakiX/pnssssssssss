@@ -6,7 +6,6 @@ use Model\Adress_book;
 use Model\Post;
 use Model\News;
 use Model\Adressbook;
-use Model\Subvision;
 use Src\View;
 use Src\Request;
 use Model\User;
@@ -133,15 +132,35 @@ class Site
         return new View('site.newsCreate');
 
     }
-    public function update(Request $request, $id)
+    public function newsUpdate(Request $request): string
     {
-        $news = new News();
-        $result = $news->newsUpdate($id, $request->all());
+        $news = News::where('id', $request->id)->get();
 
-        if ($result) {
-            return (new View())->render('site.newsUpdate', ['news' => $id]);
+        if ($request->method === 'POST') {
+                $news[0]->discription = $request->discription;
+                $news[0]->title = $request->title;
+                $news[0]->photo($_FILES['photo']);
+                $news[0]->save();
+                app()->route->redirect('/news');
+
         }
+        return new View('site.newsUpdate', [ 'news' => $news ]);
+
     }
+    public function destroy(Request $request): string
+    {
+        if ($request->method === 'POST') {
+
+            $news = News::where('id', $request->id)->get();
+            $news->delete();
+            app()->route->redirect('/news');
+
+        }
+        return new View('site.newsDestroy', [ 'news' => $news ]);
+    }
+
+
+
 
 
 }
